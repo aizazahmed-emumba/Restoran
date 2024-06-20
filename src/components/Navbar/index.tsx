@@ -9,11 +9,7 @@ const Navbar: React.FC = () => {
     <nav className="nav-container">
       <div className="nav-section">
         <div className="nav-logo">
-          <img
-            src="/logo.png"
-            alt="logo"
-            className="nav-logo-img"
-          />
+          <img src="/logo.png" alt="logo" className="nav-logo-img" />
         </div>
         <div className="nav-menue">
           <a
@@ -52,8 +48,22 @@ const Navbar: React.FC = () => {
               display: isOpened ? "block" : "none",
             }}
           >
-            <h1 className="nav-mobile-item">HOME</h1>
-            <h1 className="nav-mobile-item">CONTACT</h1>
+            <Link
+              to={"/"}
+              className="nav-mobile-item"
+              style={
+                location?.pathname === "/contact" ? { color: "black" } : {}
+              }
+            >
+              HOME
+            </Link>
+            <Link
+              to={"/contact"}
+              className="nav-mobile-item"
+              style={location?.pathname === "/" ? { color: "black" } : {}}
+            >
+              CONTACT
+            </Link>
             <div className="nav-mobile-item">
               <a href="#reservation">
                 <button className="nav-mobile-button">Book A Table</button>

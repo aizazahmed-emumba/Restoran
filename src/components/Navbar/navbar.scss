@@ -65,7 +65,7 @@
                     background-color: darken($color: $primary, $amount: 10%);
             } 
             }
-            .nav-item {
+            .nav-item  {
                 font-weight: 500;
                 font-size: 15px;
                 line-height: 48px;
@@ -119,6 +119,11 @@
                 gap: 20px;
             }
             .nav-mobile-item{
+                font-weight: 500;
+                font-size: 15px;
+                line-height: 48px;
+                text-decoration: none;
+                color: $primary;
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
