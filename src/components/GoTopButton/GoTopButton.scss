@@ -1,0 +1,24 @@
+@import "../../styles/colors.scss";
+
+.goTopHidden{
+    display: none;
+}
+
+.goTop{
+    display: block;
+    border: none;
+        position: fixed;
+        background-color: $primary;
+        width: 30px;
+        height: 30px;
+        bottom: 2.5%;
+        left: 90%;
+        cursor: pointer;
+        text-align: center;
+        line-height: 30px;
+        color: white;
+        border: 1px solid rgba(254, 161, 22, 1);
+        &:hover{
+            background-color: darken($color: $primary, $amount: 10%);
+        }
+}

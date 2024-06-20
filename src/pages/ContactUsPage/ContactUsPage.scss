@@ -1,0 +1,231 @@
+@import "../../styles/colors";
+
+
+.contactpage {
+    min-height: 100vh;
+    margin-bottom: 100px;
+    .hero-section {
+        background-image: url("../../../public/backgound2.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 400px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+
+        h1{
+            margin: 0px;
+            font-family: Nunito Sans;
+            font-size: 64px;
+            font-weight: 800;
+            line-height: 76.8px;
+            color: white;
+        }
+
+        .contact-nav{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            font-family: Heebo;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+
+
+
+            a:nth-of-type(2) {
+                color: $primary;
+            }
+        }
+    }
+
+    .contact-us-section{
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        @media screen and (max-width: 768px){
+            padding: 0px 20px;
+
+        }
+
+
+        h2 {
+            font-family: Pacifico;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 24px;
+            color: $primary;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+
+        }
+
+        h1 {
+            font-family: Poppins;
+            font-size: 40px;
+            font-weight: 800;
+            line-height: 60px;
+            margin: 0px;
+            margin-bottom: 10px;
+            color: #0F172B;
+            @media screen and (max-width: 768px){
+                font-family: Poppins;
+                font-size: 28px;
+                font-weight: 800;
+                line-height: 42px;
+            }
+        }
+
+        .contact-us-container{
+
+            max-width: 1140px;
+            width: 100%;
+
+
+            .contact-us-details{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @media screen and (max-width: 768px){
+                    flex-direction: column;
+
+                }
+
+                .detail-item{
+                    width: 100%;
+                    display: flex;
+                    justify-content: start;
+                    align-items: start;
+                    flex-direction: column;
+
+                    .flex{
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+                        gap: 10px;
+                        margin-bottom: 40px;
+                        p{
+                            font-family: Poppins;
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 24px;
+                            color: #666565;
+                            margin: 0px;
+                        }
+
+                        .icon {
+                            color: $primary;
+                        }
+                    }
+                }
+
+            }
+            .map-form-container{
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;     
+                height: 372px;
+
+                
+                @media screen and (max-width: 768px){
+                    grid-template-columns: 1fr;
+                    height: auto;
+                    .map-container{
+                        height: 372px;
+                        width: 1005;
+                    }
+                }
+
+                form{
+                    width: 100%;
+                    .form-group{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        gap: 10px;
+                        margin-top: 20px;
+        
+                        @media screen and (max-width: 768px){
+                            flex-direction: column;
+                            
+                        }
+        
+                        label{
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 20px;
+                        }
+                        input{            
+        
+                            width: 100%;
+                            padding: 20px;
+                            border: none;
+                            border-radius: 5px;
+                            border: 1px solid #CED4DA;
+                            &::placeholder{
+        
+                                font-size: 16px;
+                                font-weight: 400;
+                                line-height: 24px;
+                                color: #666565;
+                                
+                            }
+        
+        
+                            @media screen and (max-width: 768px){
+                                width: auto;
+                            }
+        
+                        }
+                        textarea{
+                            padding: 10px;
+                            min-height: 98px ;
+                            width: 100%;
+                            border: none;
+                            border-radius: 5px;
+                            border: 1px solid #CED4DA;
+                            &::placeholder{
+        
+                                font-size: 16px;
+                                font-weight: 400;
+                                line-height: 24px;
+                                color: #666565;
+                                
+                            }
+                            @media screen and (max-width: 768px){
+                                width: auto;
+                            }
+                        }
+                    }
+        
+                    button{
+                        margin-top: 15px;
+                        width: 100%;
+                        padding: 20px;
+                        border: 1px solid #FEA116;
+                        border-radius: 2px;
+                        background-color: $primary;
+                        color: white;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 20px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

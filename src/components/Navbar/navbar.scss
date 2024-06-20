@@ -1,0 +1,156 @@
+@import "../../styles/mixin";
+@import "../../styles/colors";
+
+.nav-container { 
+    display: flex;
+    flex-direction: row;
+    color: $primary;
+    position: absolute;
+    top : 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0px;
+    background-color: transparent;
+    height: 60px;
+    box-sizing: border-box;
+    z-index: 1000;
+
+    @media screen and (max-width: 768px){
+        padding: 0px 20px;
+    }
+
+    .nav-section{ 
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1120px;
+        .nav-logo{
+            img{
+                height: 50px;
+                width: 215px;
+                object-fit: cover;
+                @media screen and (max-width: 768px){
+                    width: 160px;
+                    height: 38px;
+                }
+            }
+        }
+        .nav-menue{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+            @media screen and (max-width: 768px){
+                display: none;
+            }
+
+            .nav-button{
+                
+                border-radius: 2px;
+                background-color: $primary;
+                color: white;
+                padding: 8px 24px 8px 24px;
+                border: transparent;
+                height: 40px;
+                line-height: 24px;
+                font-weight: 500;
+                align-items: center;
+                cursor: pointer;
+                &:hover{
+                    background-color: darken($color: $primary, $amount: 10%);
+            } 
+            }
+            .nav-item {
+                font-weight: 500;
+                font-size: 15px;
+                line-height: 48px;
+                text-decoration: none;
+                color: $primary;
+            }
+        }
+
+        .nav-hamburger{
+            display: none;
+            @media screen and (max-width: 768px){
+                display: block;
+                width: 43.5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 0px;
+                cursor: pointer;
+                border: 1px solid rgba(255, 255, 255, 0.55);
+                border-radius: 4px;
+                background-color:  rgba(15, 23, 43, 1);
+                padding: 10px 10px;
+                gap: 6px;
+            }
+
+            .nav-hamburger-line{
+                width: 17.5px;
+                height: 3px;
+                background-color: rgba(255, 255, 255, 0.55);
+            }
+
+           
+        }
+        .nav-mobile-menue{
+            display: none;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            background-color:white;
+            z-index: 1000;
+            padding: 20px 0px;
+            box-sizing: border-box;
+            :nth-child(3){
+                border-bottom: none !important;
+            }
+            @media screen and (max-width: 768px){
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+            .nav-mobile-item{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                border-bottom: 1px solid rgba(15, 23, 43, 0.1);
+                margin: 10px;
+
+
+                .nav-mobile-button{
+                    border-radius: 2px;
+                    background-color: $primary;
+                    color: white;
+                    padding: 8px 24px 8px 24px;
+                    border: transparent;
+                    height: 40px;
+                    line-height: 24px;
+                    font-weight: 500;
+                    align-items: center;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: darken($color: $primary, $amount: 10%);
+                    }
+                }
+                .nav-mobile-item{
+                    font-weight: 500;
+                    font-size: 15px;
+                    line-height: 48px;
+                }
+            }
+        }
+    }
+}
+
+

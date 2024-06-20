@@ -1,0 +1,56 @@
+@import "../../styles/colors";
+
+
+.menu-item{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+
+    .menu-item-img{
+        img{
+            width:100%;
+            max-width: 80px;
+            border-radius: 2px;
+            object-fit: cover;
+        }
+    }
+    .menu-item-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 10px;
+        .menu-item-title{
+           
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(222, 226, 230, 1);
+            .price{
+                color: $primary;
+            }
+            h2{   
+                margin: 0;
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 24px;
+                color: #0F172B;
+            }
+        }
+
+        .menu-item-description{
+            p{     
+                margin: 0;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 20px;
+                color: #4B5563;
+            }
+        }
+    }
+}

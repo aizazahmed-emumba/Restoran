@@ -1,0 +1,136 @@
+@import "../../styles/colors";
+
+.reservation-section{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #0F172B;
+    color: white;
+    @media screen and (max-width: 768px){
+        margin-top: 40px;
+        grid-template-columns: 1fr;
+    }
+    .reservation-section-img{
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .reservation-section-content{
+        max-width: 555px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        padding: 30px;
+
+        h2{
+            margin: 0;
+            font-family: "Pacifico", cursive;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 24px;
+            color: $primary;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        h1{
+            margin: 0px;
+            margin-top: 15px;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 48px;
+            @media screen and (max-width: 768px){
+                font-size: 28px;
+                line-height: 48px;
+                
+            }
+        }
+
+        form{
+            width: 100%;
+            .form-group{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                margin-top: 20px;
+
+                @media screen and (max-width: 768px){
+                    flex-direction: column;
+                    
+                }
+
+                label{
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 20px;
+                }
+                input{            
+
+                    width: 100%;
+                    padding: 20px;
+                    border: none;
+                    border-radius: 5px;
+                    border: 1px solid #CED4DA;
+                    &::placeholder{
+
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 24px;
+                        color: #666565;
+                        
+                    }
+
+
+                    @media screen and (max-width: 768px){
+                        width: auto;
+                    }
+
+                }
+                textarea{
+                    padding: 10px;
+                    min-height: 98px ;
+                    width: 100%;
+                    border: none;
+                    border-radius: 5px;
+                    border: 1px solid #CED4DA;
+                    width: 100%;
+                    &::placeholder{
+
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 24px;
+                        color: #666565;
+                        
+                    }
+                    @media screen and (max-width: 768px){
+                        width: auto;
+                    }
+                }
+            }
+
+            button{
+                margin-top: 15px;
+                width: 100%;
+                padding: 20px;
+                border: 1px solid #FEA116;
+                border-radius: 2px;
+                background-color: $primary;
+                color: white;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 20px;
+                cursor: pointer;
+            }
+        }
+
+    }
+
+
+}
