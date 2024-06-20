@@ -121,50 +121,50 @@ const MenuSection: React.FC = () => {
               name="Chicken Lunch"
               price={115}
               description="Ipsum ipsum clita erat amet dolor justo diam"
-              image="../../public/menu-1.png"
+              image="/menu-1.png"
             />
             <MenuItem
               name="Chicken Burger"
               price={150}
               description="Ipsum ipsum clita erat amet dolor justo diam"
-              image="../../public/menu-3.png"
+              image="/menu-3.png"
             />
             <MenuItem
               name="Chicken Burger"
               price={200}
               description="Ipsum ipsum clita erat amet dolor justo diam"
-              image="../../public/menu-2.png"
+              image="/menu-2.png"
             />
             <MenuItem
               name="Chicken Burger"
               price={300}
               description="Ipsum ipsum clita erat amet dolor justo diam"
-              image="../../public/menu-4.jpg.png"
+              image="/menu-4.jpg.png"
             />
 
             <MenuItem
               name="Chicken Burger"
               price={165}
               description="Ipsum ipsum clita erat amet dolor justo diam"
-              image="../../public/menu-6.jpg.png"
+              image="/menu-6.jpg.png"
             />
             <MenuItem
               name="Chicken Burger"
               price={115}
               description="Ipsum ipsum clita erat amet dolor justo diam"
-              image="../../public/menu-7.jpg.png"
+              image="/menu-7.jpg.png"
             />
             <MenuItem
               name="Chicken Burger"
               price={175}
               description="Ipsum ipsum clita erat amet dolor justo diam"
-              image="../../public/menu-5.jpg.png"
+              image="/menu-5.jpg.png"
             />
             <MenuItem
               name="Chicken Burger"
               price={600}
               description="Ipsum ipsum clita erat amet dolor justo diam"
-              image="../../public/menu-8.jpg.png"
+              image="/menu-8.jpg.png"
             />
           </>
         )}
@@ -175,49 +175,49 @@ const MenuSection: React.FC = () => {
               name="Chicken Dinner"
               price={115}
               description="Ipsum ipsum clita erat amet dolor justo diam"
-              image="../../public/menu-1.png"
+              image="/menu-1.png"
             />
             <MenuItem
               name="Chicken Burger"
               price={175}
               description="Ipsum ipsum clita erat amet dolor justo diam"
-              image="../../public/menu-5.jpg.png"
+              image="/menu-5.jpg.png"
             />
             <MenuItem
               name="Chicken Burger"
               price={200}
               description="Ipsum ipsum clita erat amet dolor justo diam"
-              image="../../public/menu-2.png"
+              image="/menu-2.png"
             />
             <MenuItem
               name="Chicken Burger"
               price={150}
               description="Ipsum ipsum clita erat amet dolor justo diam"
-              image="../../public/menu-3.png"
+              image="/menu-3.png"
             />
             <MenuItem
               name="Chicken Burger"
               price={300}
               description="Ipsum ipsum clita erat amet dolor justo diam"
-              image="../../public/menu-4.jpg.png"
+              image="/menu-4.jpg.png"
             />
             <MenuItem
               name="Chicken Burger"
               price={115}
               description="Ipsum ipsum clita erat amet dolor justo diam"
-              image="../../public/menu-7.jpg.png"
+              image="/menu-7.jpg.png"
             />
             <MenuItem
               name="Chicken Burger"
               price={600}
               description="Ipsum ipsum clita erat amet dolor justo diam"
-              image="../../public/menu-8.jpg.png"
+              image="/menu-8.jpg.png"
             />
             <MenuItem
               name="Chicken Burger"
               price={165}
               description="Ipsum ipsum clita erat amet dolor justo diam"
-              image="../../public/menu-6.jpg.png"
+              image="/menu-6.jpg.png"
             />
           </>
         )}
