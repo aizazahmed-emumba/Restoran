@@ -118,7 +118,7 @@ const ContactUsPage: React.FC = () => {
                   <div className="form-group">
                     <Field type="text" name="subject" placeholder="Subject" />
                   </div>
-                  <div className="form-group">
+                  <div className="form-group last">
                     <Field as="textarea" name="message" placeholder="Message" />
                   </div>
                   <button type="submit">Send Message</button>
