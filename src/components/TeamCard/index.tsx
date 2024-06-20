@@ -13,13 +13,13 @@ const TeamCard: React.FC<TeamCardProps> = ({ img }) => {
       <p>Master Chef</p>
       <div className="social-icons">
         <div>
-          <img src="../../../public/facebook.png" alt="facebook" />
+          <img src="/facebook.png" alt="facebook" />
         </div>
         <div>
-          <img src="../../../public/twitter.png" alt="twitter" />
+          <img src="/twitter.png" alt="twitter" />
         </div>
         <div>
-          <img src="../../../public/insta.png" alt="instagram" />
+          <img src="/insta.png" alt="instagram" />
         </div>
       </div>
     </div>

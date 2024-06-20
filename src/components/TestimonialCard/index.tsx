@@ -14,7 +14,7 @@ const TestimonialCard: React.FC = () => {
       </p>
       <div className="client-details">
         <div className="avatar">
-          <img src="../../../public/testimonial-4.png" alt="client" />
+          <img src="/testimonial-4.png" alt="client" />
         </div>
         <div className="client-content">
           <h1>Client Name</h1>

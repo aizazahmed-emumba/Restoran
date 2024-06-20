@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
       <div className="nav-section">
         <div className="nav-logo">
           <img
-            src="../../../public/logo.png"
+            src="/logo.png"
             alt="logo"
             className="nav-logo-img"
           />

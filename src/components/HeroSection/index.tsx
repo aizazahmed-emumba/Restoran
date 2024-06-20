@@ -14,7 +14,7 @@ const HeroSection: React.FC = () => {
           <button>Book A Table</button>
         </div>
         <div className="hero-img-container">
-          <img src="../../../public/hero.png" alt="hero" />
+          <img src="/hero.png" alt="hero" />
         </div>
       </div>
     </section>

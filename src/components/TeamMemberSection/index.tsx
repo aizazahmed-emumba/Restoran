@@ -13,10 +13,10 @@ const TeamMemberSection: React.FC = () => {
       </h2>
       <h1>Our Master Chefs</h1>
       <div className="team-section-card-container">
-        <TeamCard img="../../../public/team-1.png" />
-        <TeamCard img="../../../public/team-2.jpg" />
-        <TeamCard img="../../../public/team-3.png" />
-        <TeamCard img="../../../public/team-4.png" />
+        <TeamCard img="/team-1.png" />
+        <TeamCard img="/team-2.jpg" />
+        <TeamCard img="/team-3.png" />
+        <TeamCard img="/team-4.png" />
       </div>
     </section>
   );

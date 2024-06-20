@@ -33,7 +33,7 @@ const ReservationSection: React.FC = () => {
   return (
     <section id="reservation" className="reservation-section">
       <div className="reservation-section-img">
-        <img src="../../../public/reservation.png" alt="reservation" />
+        <img src="/reservation.png" alt="reservation" />
       </div>
       <div className="reservation-section-content">
         <h2>
