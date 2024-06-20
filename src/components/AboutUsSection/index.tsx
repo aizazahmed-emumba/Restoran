@@ -10,16 +10,16 @@ const AboutUsSection: React.FC = () => {
       <div className="about-us-content">
         <div className="images-container">
           <div className="img-1">
-            <img src="../../../../public/about-1.png" alt="about1" />
+            <img src="/about-1.png" alt="about1" />
           </div>
           <div className="img-2">
-            <img src="../../../../public/about-2.png" alt="about2" />
+            <img src="/about-2.png" alt="about2" />
           </div>
           <div className="img-3">
-            <img src="../../../../public/about-3.png" alt="about3" />
+            <img src="/about-3.png" alt="about3" />
           </div>
           <div className="img-4">
-            <img src="../../../../public/about-4.png" alt="about4" />
+            <img src="/about-4.png" alt="about4" />
           </div>
         </div>
         <div className="detail-container">
