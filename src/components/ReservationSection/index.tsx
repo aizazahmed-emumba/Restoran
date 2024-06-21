@@ -1,5 +1,5 @@
 import React from "react";
-import { Formik, Form, Field } from "formik";
+import { Formik, Form, Field, ErrorMessage } from "formik";
 import validationSchema from "../../Validation/reservationSchema";
 import HorizontalDivider from "../HorizontalDivider";
 import "./ReservationSection.scss";
@@ -21,15 +21,6 @@ const ReservationSection: React.FC = () => {
     setSubmitting(false);
   };
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const handleValidationError = (errors: any) => {
-    for (const key in errors) {
-      if (Object.prototype.hasOwnProperty.call(errors, key)) {
-        toast.error(errors[key]);
-      }
-    }
-  };
-
   return (
     <section id="reservation" className="reservation-section">
       <div className="reservation-section-img">
@@ -47,38 +38,72 @@ const ReservationSection: React.FC = () => {
           validateOnChange={false}
           validateOnBlur={false}
         >
-          {({ validateForm }) => (
-            <Form
-              onSubmit={(e) => {
-                e.preventDefault();
-                validateForm().then((errs) => {
-                  if (Object.keys(errs).length > 0) {
-                    handleValidationError(errs);
-                  } else {
-                    handleSubmit(initialValues, { setSubmitting: () => {} });
-                  }
-                });
-              }}
-            >
+          {() => (
+            <Form>
               <div className="form-group">
-                <Field type="text" name="name" placeholder="Name" />
-                <Field type="email" name="email" placeholder="Email" />
+                <div className="form-field">
+                  <Field type="text" name="name" placeholder="Name" />
+                  <div className="error-container">
+                    <ErrorMessage
+                      name="name"
+                      component="div"
+                      className="error-message"
+                    />
+                  </div>
+                </div>
+                <div className="form-field">
+                  <Field type="email" name="email" placeholder="Email" />
+                  <div className="error-container">
+                    <ErrorMessage
+                      name="email"
+                      component="div"
+                      className="error-message"
+                    />
+                  </div>
+                </div>
               </div>
 
               <div className="form-group">
-                <Field type="date" name="date" placeholder="Date" />
-                <Field
-                  type="text"
-                  name="numberOfPeople"
-                  placeholder="No Of People"
-                />
+                <div className="form-field">
+                  <Field type="date" name="date" placeholder="Date" />
+                  <div className="error-container">
+                    <ErrorMessage
+                      name="date"
+                      component="div"
+                      className="error-message"
+                    />
+                  </div>
+                </div>
+                <div className="form-field">
+                  <Field
+                    type="text"
+                    name="numberOfPeople"
+                    placeholder="No Of People"
+                  />
+                  <div className="error-container">
+                    <ErrorMessage
+                      name="numberOfPeople"
+                      component="div"
+                      className="error-message"
+                    />
+                  </div>
+                </div>
               </div>
               <div className="form-group">
-                <Field
-                  as="textarea"
-                  name="specialRequest"
-                  placeholder="Special Request"
-                />
+                <div className="form-field">
+                  <Field
+                    as="textarea"
+                    name="specialRequest"
+                    placeholder="Special Request"
+                  />
+                  <div className="error-container">
+                    <ErrorMessage
+                      name="specialRequest"
+                      component="div"
+                      className="error-message"
+                    />
+                  </div>
+                </div>
               </div>
               <button type="submit">Book Now</button>
             </Form>

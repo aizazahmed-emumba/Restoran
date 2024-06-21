@@ -1,5 +1,5 @@
 import React from "react";
-import { Formik, Form, Field } from "formik";
+import { Formik, Form, Field, ErrorMessage } from "formik";
 import contactValidationSchema from "../../Validation/contactValidationSchema";
 import HorizontalDivider from "../../components/HorizontalDivider";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -21,15 +21,6 @@ const ContactUsPage: React.FC = () => {
     toast.success("Message sent successfully!");
     console.log(values);
     setSubmitting(false);
-  };
-
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const handleValidationError = (errors: any) => {
-    for (const key in errors) {
-      if (Object.prototype.hasOwnProperty.call(errors, key)) {
-        toast.error(errors[key]);
-      }
-    }
   };
 
   return (
@@ -95,31 +86,58 @@ const ContactUsPage: React.FC = () => {
               validateOnChange={false}
               validateOnBlur={false}
             >
-              {({ validateForm }) => (
-                <Form
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    validateForm().then((errs) => {
-                      if (Object.keys(errs).length > 0) {
-                        handleValidationError(errs);
-                      } else {
-                        handleSubmit(initialValues, {
-                          setSubmitting: () => {},
-                        });
-                      }
-                    });
-                  }}
-                >
+              {() => (
+                <Form>
                   <div className="form-group">
-                    <Field type="text" name="name" placeholder="Name" />
-                    <Field type="email" name="email" placeholder="Email" />
+                    <div className="form-field">
+                      <Field type="text" name="name" placeholder="Name" />
+                      <div className="error-container">
+                        <ErrorMessage
+                          name="name"
+                          component="div"
+                          className="error-message"
+                        />
+                      </div>
+                    </div>
+                    <div className="form-field">
+                      <Field type="email" name="email" placeholder="Email" />
+                      <div className="error-container">
+                        <ErrorMessage
+                          name="email"
+                          component="div"
+                          className="error-message"
+                        />
+                      </div>
+                    </div>
                   </div>
 
                   <div className="form-group">
-                    <Field type="text" name="subject" placeholder="Subject" />
+                    <div className="form-field">
+                      <Field type="text" name="subject" placeholder="Subject" />
+                      <div className="error-container">
+                        <ErrorMessage
+                          name="subject"
+                          component="div"
+                          className="error-message"
+                        />
+                      </div>
+                    </div>
                   </div>
                   <div className="form-group last">
-                    <Field as="textarea" name="message" placeholder="Message" />
+                    <div className="form-field">
+                      <Field
+                        as="textarea"
+                        name="message"
+                        placeholder="Message"
+                      />
+                      <div className="error-container">
+                        <ErrorMessage
+                          name="message"
+                          component="div"
+                          className="error-message"
+                        />
+                      </div>
+                    </div>
                   </div>
                   <button type="submit">Send Message</button>
                 </Form>
