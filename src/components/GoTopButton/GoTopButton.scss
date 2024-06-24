@@ -21,4 +21,9 @@
         &:hover{
             background-color: darken($color: $primary, $amount: 10%);
         }
+
+        @media screen and (max-width: 768px) {
+            left: 85%;
+            
+        }
 }
