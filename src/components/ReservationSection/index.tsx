@@ -52,7 +52,7 @@ const ReservationSection: React.FC = () => {
           validateOnChange={true}
           validateOnBlur={true}
         >
-          {({ errors, isValidating, touched }: FormikProps<FormFields>) => (
+          {({ errors, touched }: FormikProps<FormFields>) => (
             <Form>
               <div className="form-group">
                 <div className="form-field">
@@ -137,14 +137,15 @@ const ReservationSection: React.FC = () => {
                 </div>
               </div>
               <button
-            type="submit"
-            disabled={Object.keys(errors).some((key) =>
-              Boolean(touched[key as keyof FormFields]) &&
-              Boolean(errors[key as keyof FormFields])
-            )}
-          >
-            Book Now
-          </button>
+                type="submit"
+                disabled={Object.keys(errors).some(
+                  (key) =>
+                    Boolean(touched[key as keyof FormFields]) &&
+                    Boolean(errors[key as keyof FormFields])
+                )}
+              >
+                Book Now
+              </button>
             </Form>
           )}
         </Formik>
