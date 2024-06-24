@@ -11,7 +11,7 @@ const validationSchema = Yup.object().shape({
   date: Yup.date()
     .required("Date is required")
     .nullable(),
-    numberOfPeople: Yup.number().required("Number of people is required"),
+    numberOfPeople: Yup.number().integer("Please Enter a Whole number").required("Number of people is required").typeError("Please Enter a number"),
   specialRequest: Yup.string()
     .matches(/^[A-Za-z\s-]*$/, "Only alphabets, spaces, and hyphens are allowed")
     .max(250, "Special request must be at most 250 characters"),

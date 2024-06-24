@@ -1,12 +1,20 @@
 import React from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form, Field, ErrorMessage, FormikProps } from "formik";
 import validationSchema from "../../Validation/reservationSchema";
 import HorizontalDivider from "../HorizontalDivider";
 import "./ReservationSection.scss";
 import toast from "react-hot-toast";
 
+interface FormFields {
+  name: string;
+  email: string;
+  date: string;
+  specialRequest: string;
+  numberOfPeople: string;
+}
+
 const ReservationSection: React.FC = () => {
-  const initialValues = {
+  const initialValues: FormFields = {
     name: "",
     email: "",
     date: "",
@@ -20,6 +28,12 @@ const ReservationSection: React.FC = () => {
     console.log(values);
     setSubmitting(false);
   };
+
+  const [dateTimeType, setDateTimeType] = React.useState<
+    "text" | "datetime-local"
+  >("text");
+
+  const dateInputRef = React.useRef<HTMLInputElement>(null);
 
   return (
     <section id="reservation" className="reservation-section">
@@ -35,10 +49,10 @@ const ReservationSection: React.FC = () => {
           initialValues={initialValues}
           validationSchema={validationSchema}
           onSubmit={handleSubmit}
-          validateOnChange={false}
-          validateOnBlur={false}
+          validateOnChange={true}
+          validateOnBlur={true}
         >
-          {() => (
+          {({ errors, isValidating, touched }: FormikProps<FormFields>) => (
             <Form>
               <div className="form-group">
                 <div className="form-field">
@@ -65,7 +79,24 @@ const ReservationSection: React.FC = () => {
 
               <div className="form-group">
                 <div className="form-field">
-                  <Field type="date" name="date" placeholder="Date" />
+                  <Field
+                    innerRef={dateInputRef}
+                    onClick={() => {
+                      setDateTimeType("datetime-local");
+                      console.log(dateInputRef.current);
+                      setTimeout(() => {
+                        if (dateInputRef.current) {
+                          dateInputRef.current.showPicker();
+                        }
+                      }, 0);
+                    }}
+                    onBlur={(e: { target: { value: string } }) => {
+                      if (e.target.value === "") setDateTimeType("text");
+                    }}
+                    type={dateTimeType}
+                    name="date"
+                    placeholder="Date & Time"
+                  />
                   <div className="error-container">
                     <ErrorMessage
                       name="date"
@@ -105,7 +136,15 @@ const ReservationSection: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <button type="submit">Book Now</button>
+              <button
+            type="submit"
+            disabled={Object.keys(errors).some((key) =>
+              Boolean(touched[key as keyof FormFields]) &&
+              Boolean(errors[key as keyof FormFields])
+            )}
+          >
+            Book Now
+          </button>
             </Form>
           )}
         </Formik>

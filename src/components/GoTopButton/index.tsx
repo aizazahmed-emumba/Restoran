@@ -32,7 +32,7 @@ const GoTopTopButton: React.FC = () => {
       <div ref={refScrolUp}></div>
       <div className={showGoTop} onClick={handleScrollUp}>
         <button className="goTop">
-          <FontAwesomeIcon icon={faArrowUp} />
+          <FontAwesomeIcon icon={faArrowUp} size="xl" />
         </button>
       </div>
     </>
